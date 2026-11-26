@@ -6,7 +6,9 @@ use Liberu\Accounting\ConstructionTaxLivewire\ConstructionTaxLivewireServiceProv
 
 it('boots accounting-construction-tax-livewire service provider', function (): void {
     $provider = $this->app->register(ConstructionTaxLivewireServiceProvider::class, force: true);
-    if (method_exists($provider, 'boot')) { $provider->boot(); }
+    if (method_exists($provider, 'boot')) {
+        $provider->boot();
+    }
 
     expect($provider)->toBeInstanceOf(ConstructionTaxLivewireServiceProvider::class);
 });
